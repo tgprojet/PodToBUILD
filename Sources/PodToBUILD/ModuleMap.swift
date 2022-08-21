@@ -27,6 +27,7 @@ public struct ModuleMap: BazelTarget {
             .named(name: "module_name", value: moduleName.toSkylark()),
             .named(name: "hdrs", value: headers.toSkylark()),
         ]
+        print("HI THERE");
         if let moduleMapName = self.moduleMapName {
             args.append(.named(name: "module_map_name", value: moduleMapName.toSkylark()))
         }
